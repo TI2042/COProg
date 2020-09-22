@@ -15,6 +15,12 @@ namespace WinForm
         public Form1()
         {
             InitializeComponent();
+            comboBoxUserControl1.LoadEnumeration(typeof(TestEnum));
+        }
+
+        private void comboBoxUserControl1_ComboBoxSelectedElementChange(object sender, EventArgs e)
+        {
+            MessageBox.Show(comboBoxUserControl1.SelectText);
         }
     }
 }
