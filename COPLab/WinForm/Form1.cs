@@ -16,11 +16,18 @@ namespace WinForm
         {
             InitializeComponent();
             comboBoxUserControl1.LoadEnumeration(typeof(TestEnum));
+            textBoxUserControl1.SetColor = Color.Red;
         }
 
         private void comboBoxUserControl1_ComboBoxSelectedElementChange(object sender, EventArgs e)
         {
             MessageBox.Show(comboBoxUserControl1.SelectText);
         }
+
+        private void buttonGetEmail_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(textBoxUserControl1.GetText);
+        }
+
     }
 }

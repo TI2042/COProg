@@ -56,6 +56,12 @@
       <DependentUpon>ComboBoxUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextBoxUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextBoxUserControl.Designer.cs">
+      <DependentUpon>TextBoxUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ComboBoxUserControl.resx">
       <DependentUpon>ComboBoxUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,6 +74,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TextBoxUserControl.resx">
+      <DependentUpon>TextBoxUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
