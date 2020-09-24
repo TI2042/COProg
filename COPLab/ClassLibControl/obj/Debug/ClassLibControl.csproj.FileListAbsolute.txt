@@ -9,3 +9,4 @@ C:\Users\mafio\source\repos\COProg\COPLab\ClassLibControl\obj\Debug\ClassLibCont
 C:\Users\mafio\source\repos\COProg\COPLab\ClassLibControl\obj\Debug\ClassLibControl.dll
 C:\Users\mafio\source\repos\COProg\COPLab\ClassLibControl\obj\Debug\ClassLibControl.pdb
 C:\Users\mafio\source\repos\COProg\COPLab\ClassLibControl\obj\Debug\ClassLibControl.TextBoxUserControl.resources
+C:\Users\mafio\source\repos\COProg\COPLab\ClassLibControl\obj\Debug\ClassLibControl.ListBoxUserControl.resources

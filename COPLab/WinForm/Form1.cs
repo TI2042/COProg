@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,10 @@ namespace WinForm
         {
             InitializeComponent();
             comboBoxUserControl1.LoadEnumeration(typeof(TestEnum));
-            textBoxUserControl1.SetColor = Color.Red;
+            
+            textBoxUserControl1.SetColor = Color.Red; 
+
+            listBoxUserControl1.LoadList(typeof(TestClass));          
         }
 
         private void comboBoxUserControl1_ComboBoxSelectedElementChange(object sender, EventArgs e)

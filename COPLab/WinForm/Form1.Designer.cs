@@ -31,16 +31,19 @@
             this.groupBox_ComboBox = new System.Windows.Forms.GroupBox();
             this.comboBoxUserControl1 = new ClassLibControl.ComboBoxUserControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxUserControl1 = new ClassLibControl.TextBoxUserControl();
             this.buttonGetEmail = new System.Windows.Forms.Button();
+            this.textBoxUserControl1 = new ClassLibControl.TextBoxUserControl();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBoxUserControl1 = new ClassLibControl.ListBoxUserControl();
             this.groupBox_ComboBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ComboBox
             // 
             this.groupBox_ComboBox.Controls.Add(this.comboBoxUserControl1);
-            this.groupBox_ComboBox.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_ComboBox.Location = new System.Drawing.Point(21, 19);
             this.groupBox_ComboBox.Name = "groupBox_ComboBox";
             this.groupBox_ComboBox.Size = new System.Drawing.Size(165, 62);
             this.groupBox_ComboBox.TabIndex = 1;
@@ -67,14 +70,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поле ввода почты";
             // 
-            // textBoxUserControl1
-            // 
-            this.textBoxUserControl1.Location = new System.Drawing.Point(6, 12);
-            this.textBoxUserControl1.Name = "textBoxUserControl1";
-            this.textBoxUserControl1.SetColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxUserControl1.Size = new System.Drawing.Size(275, 30);
-            this.textBoxUserControl1.TabIndex = 0;
-            // 
             // buttonGetEmail
             // 
             this.buttonGetEmail.Location = new System.Drawing.Point(6, 57);
@@ -85,17 +80,44 @@
             this.buttonGetEmail.UseVisualStyleBackColor = true;
             this.buttonGetEmail.Click += new System.EventHandler(this.buttonGetEmail_Click);
             // 
+            // textBoxUserControl1
+            // 
+            this.textBoxUserControl1.Location = new System.Drawing.Point(6, 12);
+            this.textBoxUserControl1.Name = "textBoxUserControl1";
+            this.textBoxUserControl1.SetColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxUserControl1.Size = new System.Drawing.Size(275, 30);
+            this.textBoxUserControl1.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listBoxUserControl1);
+            this.groupBox2.Location = new System.Drawing.Point(512, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(235, 309);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Список значений";
+            // 
+            // listBoxUserControl1
+            // 
+            this.listBoxUserControl1.Location = new System.Drawing.Point(6, 12);
+            this.listBoxUserControl1.Name = "listBoxUserControl1";
+            this.listBoxUserControl1.Size = new System.Drawing.Size(223, 291);
+            this.listBoxUserControl1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(755, 334);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_ComboBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox_ComboBox.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -107,6 +129,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private ClassLibControl.TextBoxUserControl textBoxUserControl1;
         private System.Windows.Forms.Button buttonGetEmail;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private ClassLibControl.ListBoxUserControl listBoxUserControl1;
     }
 }
 
