@@ -35,27 +35,32 @@
             // listBox
             // 
             this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(2, 38);
+            this.listBox.ItemHeight = 16;
+            this.listBox.Location = new System.Drawing.Point(3, 47);
+            this.listBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(219, 251);
+            this.listBox.Size = new System.Drawing.Size(291, 308);
             this.listBox.TabIndex = 0;
             this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(2, 6);
+            this.textBox.Location = new System.Drawing.Point(3, 7);
+            this.textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(218, 20);
+            this.textBox.Size = new System.Drawing.Size(289, 22);
             this.textBox.TabIndex = 1;
+            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // ListBoxUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.listBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ListBoxUserControl";
-            this.Size = new System.Drawing.Size(225, 292);
+            this.Size = new System.Drawing.Size(300, 359);
             this.ResumeLayout(false);
             this.PerformLayout();
 

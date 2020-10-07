@@ -1,0 +1,14 @@
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\bin\Release\WinForm.exe.config
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\bin\Release\WinForm.exe
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\bin\Release\WinForm.pdb
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\bin\Release\ClassLibControl.dll
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\bin\Release\ClassLibControl.pdb
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\bin\Release\ClassLibControl.dll.config
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\obj\Release\WinForm.csprojAssemblyReference.cache
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\obj\Release\WinForm.Form1.resources
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\obj\Release\WinForm.Properties.Resources.resources
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\obj\Release\WinForm.csproj.GenerateResource.cache
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\obj\Release\WinForm.csproj.CoreCompileInputs.cache
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\obj\Release\WinForm.csproj.CopyComplete
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\obj\Release\WinForm.exe
+C:\Users\mafio\Source\Repos\COProg\COPLab\WinForm\obj\Release\WinForm.pdb

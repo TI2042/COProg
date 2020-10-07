@@ -1,0 +1,12 @@
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\bin\Release\ClassLibControl.dll.config
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\bin\Release\ClassLibControl.dll
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\bin\Release\ClassLibControl.pdb
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.csprojAssemblyReference.cache
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.ComboBoxUserControl.resources
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.ListBoxUserControl.resources
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.Properties.Resources.resources
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.TextBoxUserControl.resources
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.csproj.GenerateResource.cache
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.csproj.CoreCompileInputs.cache
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.dll
+C:\Users\mafio\Source\Repos\COProg\COPLab\ClassLibControl\obj\Release\ClassLibControl.pdb

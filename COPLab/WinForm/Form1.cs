@@ -18,9 +18,13 @@ namespace WinForm
             InitializeComponent();
             comboBoxUserControl1.LoadEnumeration(typeof(TestEnum));
             
-            textBoxUserControl1.SetColor = Color.Red; 
+            textBoxUserControl1.SetColor = Color.Red;
+            TestClass testClass = new TestClass();
+            testClass.Age = 19;
+            testClass.Name = "Серега";
+            testClass.SName = "Батькович";
 
-            listBoxUserControl1.LoadList(typeof(TestClass));          
+            listBoxUserControl1.LoadList(testClass);          
         }
 
         private void comboBoxUserControl1_ComboBoxSelectedElementChange(object sender, EventArgs e)
