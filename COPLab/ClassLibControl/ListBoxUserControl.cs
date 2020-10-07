@@ -14,48 +14,46 @@ namespace ClassLibControl
 {
     public partial class ListBoxUserControl : UserControl
     {
+        private int _SelectedIndex;
+        private event EventHandler _ComboBoxSelectedElementChenge;
         public  List<object> objList= new List<object>();
         public List<string> propPattern = new List<string>();
         public ListBoxUserControl()
         {
             InitializeComponent();
+            listBox.SelectedIndexChanged += (sender, e) => { _ComboBoxSelectedElementChenge?.Invoke(sender, e); };
         }
 
-        public void GetPattern(object cl)
+        public void SetPattern(string pattern)
         {
-            textBox.Text = "Age Name SName";
-            if (textBox.Text == "")
+            foreach (var word in pattern.Split(' '))
             {
-                foreach(var elem in cl.GetType().GetProperties())
-                {
-                    propPattern.Add(elem.Name);
-                }
-            }
-            else
-            {
-                foreach (var word in textBox.Text.Split(' '))
-                {
-                    propPattern.Add(word);
-                }
+                propPattern.Add(word);
             }
         }
-        public void LoadList(object cl)
+        
+        public void AddClass(object cl)
         {
-            GetPattern(cl);
             objList.Add(cl);
-            foreach (var elem in objList)
+        }
+        public void LoadList()
+        {
+            try
             {
-                foreach (var p in elem.GetType().GetProperties())
+                foreach (var elem in objList)
                 {
-                    while (!(propPattern.Count == 0)) 
+                    for (int i = elem.GetType().GetProperties().Length; i > 0; i--)
                     {
-                        if(p.GetValue(elem).Equals(propPattern.First()))
-                        { 
-                            listBox.Items.Add(p.GetValue(elem));
-                            propPattern.Remove(propPattern.First());
-                        }
+                        var pr = elem.GetType().GetProperties().FirstOrDefault(p => p.Name.Equals(propPattern.First()));
+                        listBox.Items.Add(pr.Name+" - "+pr.GetValue(elem));
+                        propPattern.Remove(propPattern.First());
                     }
-                }              
+
+                }
+            }
+            catch
+            {
+                throw new Exception("No Pattern");
             }
         }
 
@@ -63,13 +61,39 @@ namespace ClassLibControl
         {
             MessageBox.Show("Индекс элемента:" + listBox.SelectedIndex + "  Строка:" + listBox.SelectedItem.ToString());
         }
-
-        private void textBox_TextChanged(object sender, EventArgs e)
+       
+        [Category("Спецификации"), Description("Номер выбранного элемента")]
+        public int _SelectIndex
         {
-            foreach (var word in textBox.Text.Split(' '))
+            get 
             {
-                propPattern.Add(word);
+                return _SelectedIndex;
             }
+
+            set
+            {
+                if (value > -2 && value < listBox.Items.Count)
+                {
+                    _SelectedIndex = value;
+                    listBox.SelectedIndex = _SelectIndex;
+                }
+            }
+        }
+
+        [Category("Спецификации"), Description("Текст выбранной записи")]
+        public string SelectText
+        {
+            get
+            {
+                return listBox.Text;
+            }
+        }
+
+        [Category("Спецификации"), Description("Событие выбора элемента")]
+        public event EventHandler ComboBoxSelectedElementChange
+        {
+            add { _ComboBoxSelectedElementChenge += value; }
+            remove { _ComboBoxSelectedElementChenge -= value; }
         }
     }
 }

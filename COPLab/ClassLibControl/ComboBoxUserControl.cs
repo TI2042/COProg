@@ -54,9 +54,9 @@ namespace ClassLibControl
             comboBox.SelectedIndexChanged += (sender, e) => { _ComboBoxSelectedElementChenge?.Invoke(sender, e); };
         }
 
-        public void LoadEnumeration (Type type)
+        public void LoadList (List<string> list)
         {
-            foreach (var elem in Enum.GetValues(type))
+            foreach (var elem in list)
             {
                 comboBox.Items.Add(elem.ToString());
             }

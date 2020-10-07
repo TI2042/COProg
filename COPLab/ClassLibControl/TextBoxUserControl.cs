@@ -62,7 +62,7 @@ namespace ClassLibControl
                 }
                 else
                 {
-                    return "Почта не соответсвует шаблону.";
+                    throw new Exception ("Ошибонька вышла");
                 }
             }
         }

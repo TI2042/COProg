@@ -13,18 +13,30 @@ namespace WinForm
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
-            comboBoxUserControl1.LoadEnumeration(typeof(TestEnum));
-            
+            List<string> strList = new List<string> { "Элемент1", "Элемент2", "Элемент3", "Элемент4" };
+            comboBoxUserControl1.LoadList(strList);           
             textBoxUserControl1.SetColor = Color.Red;
-            TestClass testClass = new TestClass();
-            testClass.Age = 19;
-            testClass.Name = "Серега";
-            testClass.SName = "Батькович";
+            TestClass testClass = new TestClass
+            {
+                Age = 19,
+                Name = "Серега",
+                SName = "Батькович"
+            };
+            TestClass2 testClass2 = new TestClass2
+            {
+                CarBrand = "Ford",
+                Mileage = 123000,
+                CarType = "hatchback"
+            };
+            listBoxUserControl1.SetPattern("SName Age Name CarBrand CarType Mileage");
+            listBoxUserControl1.AddClass(testClass);
+            listBoxUserControl1.AddClass(testClass2);
+            listBoxUserControl1.LoadList();
 
-            listBoxUserControl1.LoadList(testClass);          
         }
 
         private void comboBoxUserControl1_ComboBoxSelectedElementChange(object sender, EventArgs e)
@@ -37,5 +49,10 @@ namespace WinForm
             MessageBox.Show(textBoxUserControl1.GetText);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBoxUserControl1._SelectIndex = 3;
+            MessageBox.Show(listBoxUserControl1.SelectText);
+        }
     }
 }
