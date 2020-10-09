@@ -35,6 +35,8 @@ namespace WinForm
             listBoxUserControl1.SetPattern("Отчество \"SName\" возраст\"Age\" Имя\"Name\" Марка \"CarBrand\" Тип \"CarType\" Пробег\"Mileage\"");
             listBoxUserControl1.AddClass(testClass);
             listBoxUserControl1.AddClass(testClass2);
+            
+            
             listBoxUserControl1.LoadList();
 
         }

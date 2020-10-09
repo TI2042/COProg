@@ -30,14 +30,14 @@ namespace ClassLibControl
         public void SetPattern(string pattern)
         {
             
-            foreach (var word in Regex.Split(pattern, "(?: ^| \")([^\"]*) (?:$| \")"))
+            foreach (var word in Regex.Split(pattern, "\"[^\"]*\""))
             {
                 outputPattern.Add(word);
             }
-            patt = Regex.Matches(pattern, "(?: ^| \")([^\"]*) (?:$| \")");
-            foreach (var word in patt)
+            patt = Regex.Matches(pattern, "\"[^\"]*\"");
+            foreach (var p in patt)
             {
-                propPattern.Add(word.ToString());
+                propPattern.Add(p.ToString().Trim('"'));
             }
         }
         
@@ -47,11 +47,24 @@ namespace ClassLibControl
         }
         public void LoadList()
         {
-            foreach (var p in outputPattern)
+            /*foreach (var p in patt)
             {
-                listBox.Items.Add(p);
+                listBox.Items.Add(p.ToString());
             }
-            /*try
+            foreach (var p in propPattern)
+            {
+                listBox.Items.Add(p.ToString());
+            }*/
+
+            /*foreach (var elem in objList)
+            {
+                foreach (var i in elem.GetType().GetProperties())
+                {
+                    listBox.Items.Add(i.Name);
+                }
+
+            }*/
+            try
             {
                 foreach (var elem in objList)
                 {
@@ -68,7 +81,7 @@ namespace ClassLibControl
             catch
             {
                 throw new Exception("No Pattern");
-            }*/
+            }
         }
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
