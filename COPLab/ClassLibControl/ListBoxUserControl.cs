@@ -9,26 +9,35 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace ClassLibControl
 {
     public partial class ListBoxUserControl : UserControl
     {
         private int _SelectedIndex;
-        private event EventHandler _ComboBoxSelectedElementChenge;
+        private event EventHandler _ListBoxSelectedElementChenge;
         public  List<object> objList= new List<object>();
+        public List<string> outputPattern = new List<string>();
         public List<string> propPattern = new List<string>();
+        MatchCollection patt;
         public ListBoxUserControl()
         {
             InitializeComponent();
-            listBox.SelectedIndexChanged += (sender, e) => { _ComboBoxSelectedElementChenge?.Invoke(sender, e); };
+            listBox.SelectedIndexChanged += (sender, e) => { _ListBoxSelectedElementChenge?.Invoke(sender, e); };
         }
 
         public void SetPattern(string pattern)
         {
-            foreach (var word in pattern.Split(' '))
+            
+            foreach (var word in Regex.Split(pattern, "(?: ^| \")([^\"]*) (?:$| \")"))
             {
-                propPattern.Add(word);
+                outputPattern.Add(word);
+            }
+            patt = Regex.Matches(pattern, "(?: ^| \")([^\"]*) (?:$| \")");
+            foreach (var word in patt)
+            {
+                propPattern.Add(word.ToString());
             }
         }
         
@@ -38,15 +47,20 @@ namespace ClassLibControl
         }
         public void LoadList()
         {
-            try
+            foreach (var p in outputPattern)
+            {
+                listBox.Items.Add(p);
+            }
+            /*try
             {
                 foreach (var elem in objList)
                 {
                     for (int i = elem.GetType().GetProperties().Length; i > 0; i--)
                     {
                         var pr = elem.GetType().GetProperties().FirstOrDefault(p => p.Name.Equals(propPattern.First()));
-                        listBox.Items.Add(pr.Name+" - "+pr.GetValue(elem));
+                        listBox.Items.Add(outputPattern.First() + pr.GetValue(elem));
                         propPattern.Remove(propPattern.First());
+                        outputPattern.Remove(outputPattern.First());
                     }
 
                 }
@@ -54,7 +68,7 @@ namespace ClassLibControl
             catch
             {
                 throw new Exception("No Pattern");
-            }
+            }*/
         }
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,8 +106,8 @@ namespace ClassLibControl
         [Category("Спецификации"), Description("Событие выбора элемента")]
         public event EventHandler ComboBoxSelectedElementChange
         {
-            add { _ComboBoxSelectedElementChenge += value; }
-            remove { _ComboBoxSelectedElementChenge -= value; }
+            add { _ListBoxSelectedElementChenge += value; }
+            remove { _ListBoxSelectedElementChenge -= value; }
         }
     }
 }

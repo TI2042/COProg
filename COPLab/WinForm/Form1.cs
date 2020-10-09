@@ -32,7 +32,7 @@ namespace WinForm
                 Mileage = 123000,
                 CarType = "hatchback"
             };
-            listBoxUserControl1.SetPattern("SName Age Name CarBrand CarType Mileage");
+            listBoxUserControl1.SetPattern("Отчество \"SName\" возраст\"Age\" Имя\"Name\" Марка \"CarBrand\" Тип \"CarType\" Пробег\"Mileage\"");
             listBoxUserControl1.AddClass(testClass);
             listBoxUserControl1.AddClass(testClass2);
             listBoxUserControl1.LoadList();
