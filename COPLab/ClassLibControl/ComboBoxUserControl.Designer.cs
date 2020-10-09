@@ -34,18 +34,20 @@
             // comboBox
             // 
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(3, 3);
+            this.comboBox.Location = new System.Drawing.Point(4, 4);
+            this.comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(144, 21);
+            this.comboBox.Size = new System.Drawing.Size(357, 24);
             this.comboBox.TabIndex = 0;
             // 
             // ComboBoxUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.comboBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ComboBoxUserControl";
-            this.Size = new System.Drawing.Size(150, 27);
+            this.Size = new System.Drawing.Size(368, 33);
             this.ResumeLayout(false);
 
         }
