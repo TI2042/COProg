@@ -47,23 +47,7 @@ namespace ClassLibControl
         }
         public void LoadList()
         {
-            /*foreach (var p in patt)
-            {
-                listBox.Items.Add(p.ToString());
-            }
-            foreach (var p in propPattern)
-            {
-                listBox.Items.Add(p.ToString());
-            }*/
-
-            /*foreach (var elem in objList)
-            {
-                foreach (var i in elem.GetType().GetProperties())
-                {
-                    listBox.Items.Add(i.Name);
-                }
-
-            }*/
+            
             try
             {
                 foreach (var elem in objList)
