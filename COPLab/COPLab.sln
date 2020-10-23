@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm", "WinForm\WinForm.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibControl", "ClassLibControl\ClassLibControl.csproj", "{38475BFC-041F-49AC-8532-79D79DE92DEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibNonVisualComponents", "ClassLibNonVisualComponents\ClassLibNonVisualComponents.csproj", "{B6B5F911-5F8A-434E-B8E0-F635DF607F10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{38475BFC-041F-49AC-8532-79D79DE92DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38475BFC-041F-49AC-8532-79D79DE92DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38475BFC-041F-49AC-8532-79D79DE92DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B5F911-5F8A-434E-B8E0-F635DF607F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B5F911-5F8A-434E-B8E0-F635DF607F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B5F911-5F8A-434E-B8E0-F635DF607F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B5F911-5F8A-434E-B8E0-F635DF607F10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

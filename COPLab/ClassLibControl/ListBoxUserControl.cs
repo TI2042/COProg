@@ -70,10 +70,18 @@ namespace ClassLibControl
                 {
                     for (int i = elem.GetType().GetProperties().Length; i > 0; i--)
                     {
+
                         var pr = elem.GetType().GetProperties().FirstOrDefault(p => p.Name.Equals(propPattern.First()));
-                        listBox.Items.Add(outputPattern.First() + pr.GetValue(elem));
+                      
+                        listBox.Items.Add(outputPattern.First() + pr?.GetValue(elem));
                         propPattern.Remove(propPattern.First());
                         outputPattern.Remove(outputPattern.First());
+                        if(pr != null)
+                        {
+                            break;
+                        }
+
+                       
                     }
 
                 }
