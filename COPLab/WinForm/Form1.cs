@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ClassLibNonVisualComponents;
+using ClassLibNonVisualComponents.Models;
+using PdfSharp.Drawing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,10 +38,31 @@ namespace WinForm
             listBoxUserControl1.SetPattern("Отчество \"SName\" Марка \"CarBrand\" ");
             listBoxUserControl1.AddClass(testClass);
             listBoxUserControl1.AddClass(testClass2);
-            
-            
             listBoxUserControl1.LoadList();
 
+            List<object> classForControls = new List<object>();
+            classForControls.Add(new ClassForControlField(24, 211, 45));
+            classForControls.Add(new ClassForControlField(23, 1, 2));
+            classForControls.Add(new ClassForControlField(4, 1, 1));
+            classForControls.Add(new ClassForControlField(12123, 1, 1));
+            classForControls.Add(new ClassForControlField(4, 1, 1));
+
+            //saveToJson1.Save(classForControls, @"D:\test");
+
+
+            saveToExcel1.Save(new List<HeaderExcelModel> {
+                new HeaderExcelModel(1, 3, "Main Header"),
+                new HeaderExcelModel(4, 6, "Two Header")
+                }, classForControls, "nameFile");
+
+            saveToPdf1.Save(new PdfModel
+            {
+                FileName = "ForTestPdf",
+                NameGraphic = "Linear Graph",
+                points =
+                new XPoint[] { new XPoint(20, 30),
+                    new XPoint(60, 120), new XPoint(90, 20), new XPoint(170, 90), new XPoint(230, 40) }
+            });
         }
 
         private void comboBoxUserControl1_ComboBoxSelectedElementChange(object sender, EventArgs e)

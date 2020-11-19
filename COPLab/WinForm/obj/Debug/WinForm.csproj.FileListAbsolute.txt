@@ -12,3 +12,13 @@ C:\Users\mafio\source\repos\COProg\COPLab\WinForm\obj\Debug\WinForm.csproj.CopyC
 C:\Users\mafio\source\repos\COProg\COPLab\WinForm\obj\Debug\WinForm.exe
 C:\Users\mafio\source\repos\COProg\COPLab\WinForm\obj\Debug\WinForm.pdb
 C:\Users\mafio\source\repos\COProg\COPLab\WinForm\obj\Debug\WinForm.Form1.resources
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\ClassLibNonVisualComponents.dll
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\PdfSharp.dll
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\ClassLibNonVisualComponents.pdb
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\ClassLibNonVisualComponents.dll.config
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\PdfSharp.xml
+C:\Users\mafio\source\repos\COProg\COPLab\WinForm\bin\Debug\de\PdfSharp.resources.dll
