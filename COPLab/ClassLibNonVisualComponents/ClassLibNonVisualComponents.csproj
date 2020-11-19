@@ -71,10 +71,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassForControlField.cs" />
     <Compile Include="Models\ExcelCellParameters.cs" />
     <Compile Include="Models\ExcelMergeParameters.cs" />
-    <Compile Include="Models\FileForSave.cs" />
     <Compile Include="Models\HeaderExcelModel.cs" />
     <Compile Include="Models\PdfModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

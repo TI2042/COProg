@@ -41,11 +41,8 @@ namespace WinForm
             listBoxUserControl1.LoadList();
 
             List<object> classForControls = new List<object>();
-            classForControls.Add(new ClassForControlField(24, 211, 45));
-            classForControls.Add(new ClassForControlField(23, 1, 2));
-            classForControls.Add(new ClassForControlField(4, 1, 1));
-            classForControls.Add(new ClassForControlField(12123, 1, 1));
-            classForControls.Add(new ClassForControlField(4, 1, 1));
+            classForControls.Add(new ClassForControlField(908, 89890, 89089));
+            classForControls.Add(new ClassForControlField(890, 0546,45645));
 
             //saveToJson1.Save(classForControls, @"D:\test");
 
@@ -60,8 +57,7 @@ namespace WinForm
                 FileName = "ForTestPdf",
                 NameGraphic = "Linear Graph",
                 points =
-                new XPoint[] { new XPoint(20, 30),
-                    new XPoint(60, 120), new XPoint(90, 20), new XPoint(170, 90), new XPoint(230, 40) }
+                new XPoint[] { new XPoint(20, 30),new XPoint(10, 10), new XPoint(90, 90), new XPoint(130, 130), new XPoint(250, 250) }
             });
         }
 
